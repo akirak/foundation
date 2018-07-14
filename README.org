@@ -1,0 +1,35 @@
+#+title: Foundation
+
+This repository contains resources for configuring a desktop computer for daily use. It is intended for personal purposes and never meant to be neutral. These resources can include:
+
+- Instructions
+- Configuration management
+
+* Specific instructions
+** Manjaro
+I have been a user of Arch Linux for several years, but I feel like switching to a distribution that is easy to install. [[https://manjaro.org/][Manjaro]] is an Arch-based distribution but still can be easily installation without extensive CUI operations, so I will leave an instruction on its installation. [2018-07-14 Sat]
+
+There are several flavours of Manjaro Linux, but I liked Budgie Desktop when I tried Solus, so I have chosen a community release with Budgie.
+
+An initial installation of the release can be done in the following steps:
+
+1. Download an ISO from [[https://manjaro.org/community-editions/][Community Editions]] page and burn it to a USB storage.
+2. Start a computer with the storage. In the initial menu of the live ISO, set your time zone (and optionally a supported driver?) and start Manjaro.
+3. In the desktop, configure a network and start an installation wizard.
+4. Install Manjaro onto the machine using the wizard. If Manjaro locks your screen during the installation, you can unlock it with =manjaro= as a password.
+5. After the installation is finished, you can restart the computer and start using Manjaro.
+
+The remaining of this instruction describes post-installation tasks.
+*** Add support for the AUR
+Manjaro optionally supports the AUR. You can install =yaourt= without adding a repository:
+
+#+BEGIN_SRC shell
+  sudo pacman -S base-devel yaourt
+#+END_SRC
+*** Dropbox
+You can install Dropbox from the AUR:
+
+#+BEGIN_SRC shell
+  yaourt -S dropbox
+#+END_SRC
+*** TODO Input methods (Japanese and Chinese)

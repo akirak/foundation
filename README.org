@@ -5,7 +5,17 @@ This repository contains resources for configuring a desktop computer for daily 
 - Instructions
 - Configuration management
 
+* Table of contents
+:PROPERTIES:
+:TOC:      this
+:END:
+  -  [[#specific-instructions][Specific instructions]]
+    -  [[#manjaro][Manjaro]]
+
 * Specific instructions
+:PROPERTIES:
+:TOC:      1
+:END:
 ** Manjaro
 I have been a user of Arch Linux for several years, but I feel like switching to a distribution that is easy to install. [[https://manjaro.org/][Manjaro]] is an Arch-based distribution but still can be easily installation without extensive CUI operations, so I will leave an instruction on its installation. [2018-07-14 Sat]
 
@@ -33,3 +43,10 @@ You can install Dropbox from the AUR:
   yaourt -S dropbox
 #+END_SRC
 *** TODO Input methods (Japanese and Chinese)
+* Footnotes
+:PROPERTIES:
+:TOC:      ignore
+:END:
+# Local Variables:
+# before-save-hook: org-make-toc
+# End:

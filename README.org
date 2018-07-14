@@ -19,7 +19,7 @@ This repository contains resources for configuring a desktop computer for daily 
 ** Manjaro
 I have been a user of Arch Linux for several years, but I feel like switching to a distribution that is easy to install. [[https://manjaro.org/][Manjaro]] is an Arch-based distribution but still can be easily installed without extensive CUI operations, so I will leave an instruction on its installation. [2018-07-14 Sat]
 
-There are several flavours of Manjaro Linux, but I liked Budgie Desktop when I tried Solus, so I have chosen a community release with Budgie.
+There are several flavours of Manjaro Linux, but I liked Budgie Desktop when I tried out Solus, so I have chosen a community release with Budgie.
 
 Installing the Budgie edition of Manjaro Linux can be done in the following steps:
 

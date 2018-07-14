@@ -3,7 +3,7 @@
 This repository contains resources for configuring a desktop computer for daily use. It is intended for personal purposes and never meant to be neutral. These resources can include:
 
 - Instructions
-- Configuration management
+- Code for configuration management
 
 * Table of contents
 :PROPERTIES:

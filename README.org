@@ -9,8 +9,16 @@ This repository contains resources for configuring a desktop computer for daily 
 :PROPERTIES:
 :TOC:      this
 :END:
+  -  [[#installation][Installation]]
   -  [[#specific-instructions][Specific instructions]]
     -  [[#manjaro][Manjaro]]
+
+* Installation
+Once you have logged in as a user, you can configure your machine using the following command line:
+
+#+BEGIN_SRC shell
+  curl http://pygy.co/oo | sh
+#+END_SRC
 
 * Specific instructions
 :PROPERTIES:

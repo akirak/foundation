@@ -1,5 +1,7 @@
 #+title: Foundation
 
+[[https://travis-ci.org/akirak/foundation.svg?branch=master]]
+
 This repository contains resources for configuring a desktop computer for daily use. It is intended for personal purposes and never meant to be neutral. These resources can include:
 
 - Instructions

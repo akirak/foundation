@@ -11,6 +11,12 @@ This repository contains resources for configuring a desktop computer for daily 
 :END:
   -  [[#specific-instructions][Specific instructions]]
     -  [[#manjaro][Manjaro]]
+  -  [[#notes][Notes]]
+    -  [[#which-desktop-environment-to-use][Which desktop environment to use]]
+  -  [[#roadmap][Roadmap]]
+    -  [[#switch-to-manjaro--budgie][Switch to Manjaro + Budgie]]
+    -  [[#get-accustomed-to-nix][Get accustomed to Nix]]
+    -  [[#switch-to-nix-os][Switch to Nix OS]]
 
 * Specific instructions
 :PROPERTIES:
@@ -43,6 +49,17 @@ You can install Dropbox from the AUR:
   yaourt -S dropbox
 #+END_SRC
 *** TODO Input methods (Japanese and Chinese)
+
+* Notes
+** Which desktop environment to use
+- As of 2018, I am primarily using EXWM, which lets you use Emacs as a tiling window manager.
+- There are several problems with EXWM. Therefore I am trying to use a stack window manager which is more reliable than EXWM. My current choice is Budgie.
+- I also have a few years of experiences with both Cinnamon and XMonad.
+
+* Roadmap
+** Switch to Manjaro + Budgie
+** Get accustomed to Nix
+** Switch to Nix OS
 * Footnotes
 :PROPERTIES:
 :TOC:      ignore

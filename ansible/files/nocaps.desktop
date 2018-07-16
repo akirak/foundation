@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Set ctrl:nocaps
+Description=Use CapsLock as Ctrl
+Exec=setxkbmap -option ctrl:nocaps

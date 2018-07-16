@@ -56,6 +56,8 @@ You can install Dropbox from the AUR:
 #+BEGIN_SRC shell
   yaourt -S dropbox
 #+END_SRC
+*** Using CapsLock as Ctrl
+I tried to add a command line to run =setxkbmap= to xinitrc to use CapsLock and Ctrl, but it didn't work. Xmodmap didn't work either. I could make =setxkbmap= work by adding it as a startup application of the desktop environment, so I have added it to the Ansible playbook.
 *** Input methods (Japanese and Chinese)
 Install fcitx:
 

@@ -1,0 +1,13 @@
+---
+- git_config: name=user.name scope=global
+  register: name
+
+- when: name.config_value == ""
+  block:
+    - pause:
+        prompt: "Enter your full name"
+      register: user_fullname
+    - git_config:
+        name: user.name
+        scope: global
+        value: "{{ user_fullname }}"

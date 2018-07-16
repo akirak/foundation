@@ -2,6 +2,7 @@
 - hosts: all
   roles:
     - name: fish
+    - name: git-config
   tasks:
     - name: Install a desktop file to set ctrl:nocaps setxkbmap option
       copy:

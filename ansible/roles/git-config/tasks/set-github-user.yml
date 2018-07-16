@@ -1,0 +1,13 @@
+---
+- git_config: name=github.user scope=global
+  register: github_user
+
+- when: github_user.config_value == ""
+  block:
+    - pause:
+        prompt: "Enter your GitHub login"
+      register: login
+    - git_config:
+        name: github.user
+        scope: global
+        value: "{{ login }}"

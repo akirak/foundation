@@ -1,0 +1,4 @@
+---
+- import_tasks: set-user-name.yml
+- import_tasks: set-user-email.yml
+- import_tasks: set-github-user.yml

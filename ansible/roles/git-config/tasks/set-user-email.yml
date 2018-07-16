@@ -1,0 +1,13 @@
+---
+- git_config: name=user.email scope=global
+  register: email
+
+- when: email.config_value == ""
+  block:
+    - pause:
+        prompt: "Enter your email"
+      register: user_email
+    - git_config:
+        name: user.email
+        scope: global
+        value: "{{ user_email }}"

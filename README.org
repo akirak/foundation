@@ -20,6 +20,12 @@ Once you have logged in as a user, you can configure your machine using the foll
   curl http://pygy.co/oo | sh
 #+END_SRC
 
+An alternative way to install this configuration is to clone the repository into somewhere and run the following script as the user:
+
+#+BEGIN_SRC shell
+./bootstrap.sh
+#+END_SRC
+
 * Specific instructions
 :PROPERTIES:
 :TOC:      1

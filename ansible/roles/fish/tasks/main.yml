@@ -5,6 +5,17 @@
     name: fish
     state: present
 
+- name: Install my fish configuration
+  vars:
+    fish_config_dir: "{{ lookup('env', 'HOME') }}/.config/fish"
+  block:
+    - file:
+        dest: "{{ fish_config_dir }}"
+        state: directory
+    - copy:
+        src: files/config.fish
+        dest: "{{ fish_config_dir }}/config.fish"
+
 - when: lookup('env', 'SHELL') != '/usr/bin/fish'
   block:
     - pip:

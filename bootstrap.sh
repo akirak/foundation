@@ -31,6 +31,8 @@ if [ -f /etc/manjaro-release ]; then
         echo "You must run this script as a user of UID 1000." >&2
         exit 1
     fi
+    # Add the user to sudoers so that it can run root commands without password
+    echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$USER
     # Run already_cloned function to get the context as an exit status
     already_cloned
     if [ $? -gt 0 ]; then

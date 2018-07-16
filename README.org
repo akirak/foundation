@@ -49,27 +49,27 @@ The remaining of this instruction describes post-installation tasks.
 *** Add support for the AUR
 Manjaro optionally supports the AUR. You can install =yaourt= without adding a repository:
 
-#+BEGIN_SRC shell
-  sudo pacman -S base-devel yaourt
+#+BEGIN_SRC shell :async :results silent
+sudo pacman -S --noconfirm --needed base-devel yaourt
 #+END_SRC
 *** Dropbox
 You can install Dropbox from the AUR:
 
-#+BEGIN_SRC shell
-  yaourt -S dropbox
+#+BEGIN_SRC shell :async :results silent
+yaourt -S --noconfirm --needed dropbox
 #+END_SRC
 *** Using CapsLock as Ctrl
 I tried to add a command line to run =setxkbmap= to xinitrc to use CapsLock and Ctrl, but it didn't work. Xmodmap didn't work either. I could make =setxkbmap= work by adding it as a startup application of the desktop environment, so I have added it to the Ansible playbook.
 *** Input methods (Japanese and Chinese)
 Install fcitx:
 
-#+BEGIN_SRC shell :async
-  sudo pacman -S fcitx fcitx-qt5 fcitx-gtk3 fcitx-gtk2 fcitx-configtool
+#+BEGIN_SRC shell :async :results silent
+sudo pacman -S --noconfirm --needed fcitx fcitx-qt5 fcitx-gtk3 fcitx-gtk2 fcitx-configtool
 #+END_SRC
 
 You also have to set the following environment variables:
 
-#+BEGIN_SRC shell
+#+BEGIN_SRC shell :results silent
   outfile=/etc/X11/xinit/xinitrc.d/90-fcitx.sh
   echo <<EOF | sudo tee $outfile
   XMODIFIERS=@im=fcitx
@@ -84,14 +84,14 @@ You also have to set the following environment variables:
 
 To support Japanese, install fcitx-mozc:
 
-#+BEGIN_SRC shell :async
-  sudo pacman -S fcitx-mozc
+#+BEGIN_SRC shell :async :results silent
+  sudo pacman -S --noconfirm --needed fcitx-mozc
 #+END_SRC
 
 To support simplified Chinese, install fcitx-sunpinyin:
 
-#+BEGIN_SRC shell :async
-  sudo pacman -S fcitx-sunpinyin
+#+BEGIN_SRC shell :async :results silent
+  sudo pacman -S --noconfirm --needed fcitx-sunpinyin
 #+END_SRC
 *** TODO Removable volumes
 Udiskie somehow hangs up the machine. I need an alternative way to manage removable devices.

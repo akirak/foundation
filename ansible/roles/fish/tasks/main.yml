@@ -1,0 +1,22 @@
+---
+- name: Install fish
+  become: yes
+  package:
+    name: fish
+    state: present
+
+- when: lookup('env', 'SHELL') != '/usr/bin/fish'
+  block:
+    - pip:
+        name: pexpect
+      become: yes
+
+    - pause:
+        prompt: "Enter your password to run chsh: "
+        echo: no
+      register: password
+
+    - expect:
+        command: "chsh -s /usr/bin/fish"
+        responses:
+          Password: "{{ password.user_input }}"

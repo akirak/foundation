@@ -56,7 +56,39 @@ You can install Dropbox from the AUR:
 #+BEGIN_SRC shell
   yaourt -S dropbox
 #+END_SRC
-*** TODO Input methods (Japanese and Chinese)
+*** Input methods (Japanese and Chinese)
+Install fcitx:
+
+#+BEGIN_SRC shell :async
+  sudo pacman -S fcitx fcitx-qt5 fcitx-gtk3 fcitx-gtk2 fcitx-configtool
+#+END_SRC
+
+You also have to set the following environment variables:
+
+#+BEGIN_SRC shell
+  outfile=/etc/X11/xinit/xinitrc.d/90-fcitx.sh
+  echo <<EOF | sudo tee $outfile
+  XMODIFIERS=@im=fcitx
+  GTK_IM_MODULE=fcitx
+  QT_IM_MODULE=fcitx
+  export XMODIFIERS
+  export GTK_IM_MODULE
+  export QT_IM_MODULE
+  EOF
+  sudo chmod a+x $outfile
+#+END_SRC
+
+To support Japanese, install fcitx-mozc:
+
+#+BEGIN_SRC shell :async
+  sudo pacman -S fcitx-mozc
+#+END_SRC
+
+To support simplified Chinese, install fcitx-sunpinyin:
+
+#+BEGIN_SRC shell :async
+  sudo pacman -S fcitx-sunpinyin
+#+END_SRC
 * Footnotes
 :PROPERTIES:
 :TOC:      ignore

@@ -4,6 +4,8 @@ This repository contains resources for configuring a desktop computer for daily 
 
 - Instructions
 - Code for configuration management
+  - Common tasks are automated using Ansible
+  - Specific tasks can be done with org-babel
 
 * Table of contents
 :PROPERTIES:
@@ -91,6 +93,8 @@ To support simplified Chinese, install fcitx-sunpinyin:
 #+BEGIN_SRC shell :async
   sudo pacman -S fcitx-sunpinyin
 #+END_SRC
+*** TODO Removable volumes
+Udiskie somehow hangs up the machine. I need an alternative way to manage removable devices.
 * Footnotes
 :PROPERTIES:
 :TOC:      ignore

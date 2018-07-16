@@ -1,0 +1,6 @@
+#+title: TODOs
+* Ansible playbook
+** TODO Deploy Emacs config
+- [ ] Deploy a SSH key pair and add its public key to GitHub
+- [ ] Generate a git config
+- [ ] Clone my configuration repository

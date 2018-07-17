@@ -3,6 +3,7 @@
   roles:
     - name: fish
     - name: git-config
+    - name: fcitx
   tasks:
     - name: Install a desktop file to set ctrl:nocaps setxkbmap option
       copy:

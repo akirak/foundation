@@ -1,0 +1,6 @@
+XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+export XMODIFIERS
+export GTK_IM_MODULE
+export QT_IM_MODULE

@@ -1,0 +1,8 @@
+---
+- name: Install xinitrc for fcitx
+  become: yes
+  copy:
+    dest: /etc/X11/xinit/xinitrc.d/90-fcitx.sh
+    src: files/xinitrc.d/fcitx.sh
+    owner: root
+    mode: 0755

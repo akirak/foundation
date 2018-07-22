@@ -1,0 +1,6 @@
+---
+- name: Install my Emacs config
+  git:
+    repo: git@github.com:akirak/emacs.d.git
+    update: no
+    dest: "{{ '~/.emacs.d' | expanduser }}"

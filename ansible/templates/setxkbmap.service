@@ -1,0 +1,12 @@
+[Unit]
+Description=Run setxkbmap
+After=sleep.target
+
+[Service]
+User={{ lookup('env', 'USER') }}
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/setxkbmap -option ctrl:nocaps
+
+[Install]
+WantedBy=sleep.target

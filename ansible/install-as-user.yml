@@ -9,3 +9,7 @@
       copy:
         dest: "{{ lookup('env', 'HOME') }}/.config/autostart/nocaps.desktop"
         src: files/nocaps.desktop
+    - name: Install a systemd service file to rerun setxkbmap
+      template:
+        src: templates/setxkbmap.service
+        dest: "{{ '~/.config/systemd/user/setxkbmap.service' | expanduser }}"

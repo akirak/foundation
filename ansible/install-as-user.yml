@@ -5,11 +5,9 @@
     - name: git-config
     - name: fcitx
   tasks:
-    - name: Install a desktop file to set ctrl:nocaps setxkbmap option
-      copy:
-        dest: "{{ lookup('env', 'HOME') }}/.config/autostart/nocaps.desktop"
-        src: files/nocaps.desktop
-    - name: Install a systemd service file to rerun setxkbmap
-      template:
-        src: templates/setxkbmap.service
-        dest: "{{ '~/.config/systemd/user/setxkbmap.service' | expanduser }}"
+    - lineinfile:
+        create: yes
+        line: 'XKBOPTIONS="ctrl:nocaps"'
+        path: /etc/default/keyboard
+        regexp: '^XKBOPTIONS='
+      become: yes
